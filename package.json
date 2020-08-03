@@ -1,0 +1,28 @@
+{
+  "name": "fitness-tracker",
+  "version": "1.0.0",
+  "description": "Fitness Tracker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeders/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shobes1421/Fitness-tracker.git"
+  },
+  "author": "David Shober",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Shobes1421/Fitness-tracker/issues"
+  },
+  "homepage": "https://github.com/Shobes1421/Fitness-tracker#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.27",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4"
+  }
+}
