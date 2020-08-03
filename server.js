@@ -18,6 +18,13 @@ mongoose.connect("mongodb://localhost/workout", {
   useFindAndModify: false
 });
 
+const db = mongojs(databaseUrl, collections);
+db.on("error", error => {
+    console.log("Database Error:", error);
+});
+
+
+
 // routes
 app.use(require("./routes/api.js"));
 app.use(require("./routes/view.js"));
