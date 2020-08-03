@@ -1,6 +1,7 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
+const mongojs = require("mongojs");
 
 const PORT = process.env.PORT || 3030;
 
@@ -23,8 +24,6 @@ db.on("error", error => {
     console.log("Database Error:", error);
 });
 
-
-
 // routes
 app.use(require("./routes/api.js"));
 app.use(require("./routes/view.js"));
@@ -32,3 +31,4 @@ app.use(require("./routes/view.js"));
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
+
