@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Shobes1421/Fitness-tracker#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mongojs": "^3.1.0",
     "mongoose": "^5.9.27",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.4"
