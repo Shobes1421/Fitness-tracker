@@ -14,15 +14,19 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/workout", {
-  useNewUrlParser: true,
-  useFindAndModify: false
-});
+const databaseUrl = "workout";
+const collections = ["exercise"];
 
 const db = mongojs(databaseUrl, collections);
 db.on("error", error => {
     console.log("Database Error:", error);
 });
+
+mongoose.connect("mongodb://localhost/workout", {
+  useNewUrlParser: true,
+  useFindAndModify: false
+});
+
 
 // routes
 app.use(require("./routes/api.js"));
