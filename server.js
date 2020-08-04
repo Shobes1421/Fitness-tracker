@@ -22,6 +22,8 @@ db.on("error", error => {
     console.log("Database Error:", error);
 });
 
+const MONGOURL = process.env.MONGODB_URI || "mongodb://heroku_bj8917sh:password123@ds023603.mlab.com:23603/heroku_bj8917sh";
+
 mongoose.connect("mongodb://localhost/workout", {
   useNewUrlParser: true,
   useFindAndModify: false
