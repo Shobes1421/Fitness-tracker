@@ -17,7 +17,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB || "mongodb://localhost/workoutdb");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutdb", {
+    useNewUrlParser:true,
+    useFindAndModify:false
+});
 //mongoose.connect("mongodb://heroku_bj8917sh:password123@ds023603.mlab.com:23603/heroku_bj8917sh")
 
 // routes
